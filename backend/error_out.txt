@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+  File "C:\Users\SHABEEB\OneDrive\Desktop\Rent-Management\backend\venv\Lib\site-packages\dotenv\main.py", line 419, in load_dotenv
+    dotenv_path = find_dotenv()
+  File "C:\Users\SHABEEB\OneDrive\Desktop\Rent-Management\backend\venv\Lib\site-packages\dotenv\main.py", line 367, in find_dotenv
+    assert frame.f_back is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
