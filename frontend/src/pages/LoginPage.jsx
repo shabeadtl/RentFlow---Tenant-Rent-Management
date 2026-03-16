@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useAuth } from '../components/AuthProvider';
 import { useToast } from '../components/Toast';
 
@@ -15,7 +15,6 @@ const emptyBootstrapForm = {
 };
 
 export default function LoginPage() {
-    const navigate = useNavigate();
     const toast = useToast();
     const { bootstrapAdmin, isAuthenticated, loading, login, setup } = useAuth();
     const [loginForm, setLoginForm] = useState(emptyLoginForm);
@@ -40,7 +39,7 @@ export default function LoginPage() {
         } finally {
             setSubmitting(false);
         }
-    };;
+    };
 
     const handleBootstrap = async (event) => {
         event.preventDefault();

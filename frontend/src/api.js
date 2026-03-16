@@ -40,11 +40,11 @@ api.interceptors.request.use((config) => {
 });
 
 // ── Auth ──────────────────────────────────────────────────────────
-export const fetchAuthSetup = () => api.get('/api/auth/setup')
-export const bootstrapAdmin = (data) => api.post('/api/auth/bootstrap-admin', data)
-export const login = (data) => api.post('/api/auth/login', data)
-export const refreshAuthSession = (refresh_token) => api.post('/api/auth/refresh', { refresh_token })
-export const fetchMe = () => api.get('/api/auth/me')
+export const fetchAuthSetup = () => api.get('/auth/setup').then((response) => response.data);
+export const bootstrapAdmin = (data) => api.post('/auth/bootstrap-admin', data).then((response) => response.data);
+export const login = (data) => api.post('/auth/login', data).then((response) => response.data);
+export const refreshAuthSession = (refresh_token) => api.post('/auth/refresh', { refresh_token }).then((response) => response.data);
+export const fetchMe = () => api.get('/auth/me').then((response) => response.data);
 
 // ── User Management ───────────────────────────────────────────────
 export const fetchUsers = () => api.get('/users/').then((response) => response.data);
