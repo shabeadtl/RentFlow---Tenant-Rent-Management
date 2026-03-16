@@ -33,7 +33,7 @@ export default function LoginPage() {
         try {
             await login(loginForm);
             toast.success('Signed in successfully.');
-            navigate('/');
+            // State-driven <Navigate /> at the top of the component will handle the redirect
         } catch (error) {
             console.error(error);
             toast.error(error?.response?.data?.detail || 'Failed to sign in.');
@@ -48,7 +48,7 @@ export default function LoginPage() {
         try {
             await bootstrapAdmin(bootstrapForm);
             toast.success('Admin account created.');
-            navigate('/');
+            // State-driven <Navigate /> at the top of the component will handle the redirect
         } catch (error) {
             console.error(error);
             toast.error(error?.response?.data?.detail || 'Failed to create admin account.');
