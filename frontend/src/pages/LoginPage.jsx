@@ -40,7 +40,7 @@ export default function LoginPage() {
         } finally {
             setSubmitting(false);
         }
-    };
+    };;
 
     const handleBootstrap = async (event) => {
         event.preventDefault();
