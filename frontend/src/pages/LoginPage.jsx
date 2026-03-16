@@ -27,20 +27,20 @@ export default function LoginPage() {
         return <Navigate to="/" replace />;
     }
 
-    const handleLogin = async (event) => {
-        event.preventDefault();
-        setSubmitting(true);
-        try {
-            await login(loginForm);
-            toast.success('Signed in successfully.');
-            navigate('/');
-        } catch (error) {
-            console.error(error);
-            toast.error(error?.response?.data?.detail || 'Failed to sign in.');
-        } finally {
-            setSubmitting(false);
-        }
-    };
+const handleLogin = async (event) => {
+    event.preventDefault();
+    setSubmitting(true);
+    try {
+        await login(loginForm);
+        toast.success('Signed in successfully.');
+        window.location.href = '/';
+    } catch (error) {
+        console.error(error);
+        toast.error(error?.response?.data?.detail || 'Failed to sign in.');
+    } finally {
+        setSubmitting(false);
+    }
+};
 
     const handleBootstrap = async (event) => {
         event.preventDefault();
