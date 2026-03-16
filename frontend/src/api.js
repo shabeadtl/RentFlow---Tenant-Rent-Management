@@ -4,7 +4,7 @@
 
 import axios from 'axios';
 
-export const AUTH_STORAGE_KEY = 'rentmgr_auth';
+export const AUTH_STORAGE_KEY = 'RentFlow_auth';
 
 const api = axios.create({ baseURL: import.meta.env.VITE_API_BASE_URL || '/api' });
 

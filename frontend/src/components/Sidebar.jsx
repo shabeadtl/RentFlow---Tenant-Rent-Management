@@ -66,7 +66,7 @@ export default function Sidebar({ open, onClose }) {
 
                 {/* Footer */}
                 <div className="px-6 py-4 text-xs text-[var(--color-text-muted)] border-t border-[var(--color-border)]">
-                    © 2026 RentMgr
+                    © 2026 RentFlow
                 </div>
             </aside>
         </>

@@ -13,7 +13,7 @@ export default defineConfig({
       includeAssets: ['favicon.svg'],
       manifest: {
         name: 'Rent Management System',
-        short_name: 'RentMgr',
+        short_name: 'RentFlow',
         description: 'Full-stack tenant rent management system',
         theme_color: '#0f172a',
         background_color: '#0f172a',
