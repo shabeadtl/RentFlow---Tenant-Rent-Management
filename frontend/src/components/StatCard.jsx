@@ -1,7 +1,4 @@
-/**
- * Reusable stat card for the dashboard overview.
- * Supports optional onClick to make the card navigable.
- */
+
 export default function StatCard({ icon, label, value, accent = 'var(--color-primary)', onClick }) {
     const Tag = onClick ? 'button' : 'div';
     return (

@@ -1,8 +1,4 @@
 import { createPortal } from 'react-dom';
-
-/**
- * Reusable modal dialog with glass-morphism backdrop.
- */
 export default function Modal({ open, onClose, title, children, maxWidth = 'max-w-lg' }) {
     if (!open) return null;
 

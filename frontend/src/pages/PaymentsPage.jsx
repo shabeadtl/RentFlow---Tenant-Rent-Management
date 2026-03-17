@@ -50,7 +50,6 @@ export default function PaymentsPage() {
         [filterMonth, payments]
     );
 
-    // Build rent tracking grid: tenant × month → paid/pending
     const months = useMemo(() => {
         const now = new Date();
         const result = [];

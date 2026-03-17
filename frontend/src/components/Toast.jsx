@@ -1,8 +1,4 @@
-/* eslint-disable react-refresh/only-export-components */
-/**
- * Lightweight toast notification system.
- * Usage: import { ToastProvider, useToast } from './Toast';
- */
+
 import { createContext, useCallback, useContext, useMemo, useRef, useState } from 'react';
 
 const ToastContext = createContext(null);
@@ -79,7 +75,7 @@ export function ToastProvider({ children }) {
         <ToastContext.Provider value={value}>
             {children}
 
-            <div className="fixed bottom-6 right-6 z-[100] flex max-w-sm flex-col gap-3 pointer-events-none">
+            <div className="fixed bottom-6 right-6 z-[100] flex max-w-m flex-col gap-3 pointer-events-none">
                 {toasts.map((toast) => {
                     const styleClass = toast.type === 'error'
                         ? 'bg-[var(--color-danger)]/15 border-[var(--color-danger)]/30 text-[var(--color-danger)]'
